@@ -214,6 +214,39 @@ void tablica_wskaznikow_do_funkcji()
     }
 }
 
+void ptrs_new_tests()
+{
+//    int tab [2][2] = {{1, 2}, {3, 4}};
+//    cout<<&tab<<endl;
+//    for (int i = 0; i<2; i++)
+//    {
+//        for (int j = 0; j<2; j++)
+//            cout<<&tab[i][j]<<endl;
+//    }
+
+    uint8_t** tab = new uint8_t*[5];
+    uint8_t* adr = 0;
+    uint8_t* adr_2 = 0;
+    printf("%p\n", &tab);
+    for (int i = 0; i<5; i++)
+    {
+        tab[i] = new uint8_t[5];
+        printf("tab[%d]: %p\n", i, tab[i]);
+        for (int j = 0; j<5; j++)
+        {
+            printf("tab[%d][%d]: %p\n", i, j, &(tab[i][j]));
+        }
+
+        //cout<<hex<<x<<endl;
+    }
+    printf("%p\n", *tab);
+    tab++;
+    printf("%p\n", *tab);
+    (*tab)++;
+    printf("%p\n", *tab);
+
+}
+
 
 
 void wskazniki_test()
@@ -225,6 +258,7 @@ void wskazniki_test()
     //podwojny_wskaznik();
     //test_wskaznik_na_funkcje();
     //tablica_wskaznikow_do_funkcji();
+    ptrs_new_tests();
 }
 
 

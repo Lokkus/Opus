@@ -149,6 +149,7 @@ public:
 
 OpCopy::OpCopy(string n)
 {
+    cout<<"Dziala kon zwykly\n";
     nazwa = new string(n);
 }
 OpCopy::OpCopy(const OpCopy& wzor)
@@ -205,7 +206,8 @@ void przeladowanie_operator_przenoszacy_test()
     for(int i = 0; i < 3; i++)
     {
         string nazwa = "Mediator_" + to_string(i);
-        spis.insert(spis.begin(), OpCopy(nazwa));
+        spis.insert(spis.begin(),
+                OpCopy(nazwa));
     }
     int trwalo = time(nullptr) - czas_startu;
     cout<<"Wstawanie wizytowek na poczatek wektora trwalo: "<<trwalo<<" s"<<endl;
@@ -214,7 +216,7 @@ void przeladowanie_operator_przenoszacy_test()
     OpCopy imie("Marcin");
     OpCopy nazwisko ("Mediator");
 
-    for (auto x = 1; x< 100000000; x++)
+    for (auto x = 1; x< 3; x++)
     {
         imie.swap(nazwisko);
     }
@@ -225,9 +227,9 @@ void przeladowanie_operator_przenoszacy_test()
 void przeladowanie_opearatorow_test()
 {
     //przeladowanie_pre_post_inkrementacja();
-    stale_doslowne();
+    //stale_doslowne();
     //operator_przypisania_test();
-    //przeladowanie_operator_przenoszacy_test();
+    przeladowanie_operator_przenoszacy_test();
 }
 
 

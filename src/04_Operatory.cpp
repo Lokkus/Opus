@@ -129,8 +129,8 @@ void reinterpret_cast_przyklad()
 void operatory_test()
 {
     //operatory_sprawdzenie_wyrownania();
-    // operatory_rzutowania();
-    reinterpret_cast_przyklad();
+    operatory_rzutowania();
+    //reinterpret_cast_przyklad();
 }
 
 

@@ -19,7 +19,7 @@ public:
     }
 };
 
-// defuniujemy sobie jakas funkcje ktora przyjmuje jako argument obiejt klasy KExplicit
+// defuniujemy sobie jakas funkcje ktora przyjmuje jako argument obiekt klasy KExplicit
 void explicit_fun(KExplicit ex)
 {
     KExplicit temp = ex;

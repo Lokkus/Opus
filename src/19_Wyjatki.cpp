@@ -234,12 +234,13 @@ void noexcept_przyklad_lapania()
 {
     try
     {
-        noexcept_przyklad(8);
+        noexcept_przyklad(12);
     }
     catch(TInvalid_arg& s)
     {
         cout<<s.info;
     }
+    cout<<"Poza blokiem catch"<<endl;
 }
 
 
